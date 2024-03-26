@@ -11,16 +11,16 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class NumberClient extends WebServiceGatewaySupport {
-    public NumberToDollarsResponse getNumberToDollarsConverter(BigDecimal dnum) {
+    public NumberToDollarsResponse getNumberToDollarsConverter(BigDecimal dNum) {
         NumberToDollars request = new NumberToDollars();
-        request.setDNum(dnum);
+        request.setDNum(dNum);
 
         return (NumberToDollarsResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }
 
-    public NumberToWordsResponse getNumberToWordsConverter(BigInteger ubinum) {
+    public NumberToWordsResponse getNumberToWordsConverter(BigInteger ubiNum) {
         NumberToWords request = new NumberToWords();
-        request.setUbiNum(ubinum);
+        request.setUbiNum(ubiNum);
 
         return (NumberToWordsResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }
